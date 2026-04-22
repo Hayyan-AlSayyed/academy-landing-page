@@ -1,11 +1,11 @@
-import type { IPageHeroData } from "../../../types";
+import type { IHeroData } from "../../../types";
 import "./PageHero.css";
 import PageHeroAbstract from '../../../assets/icons/PageHeroAbstract.png';
 import { FadeIn } from "../../../Animation/FadeIn";
 import MotionWrapper from "../../../Animation/MotionWrapper";
 
 
-const PageHero = ({ badge, title, description, contactItems }: IPageHeroData) => {
+const PageHero = ({ badge, title, description, contactItems }: IHeroData) => {
   return (
     <FadeIn >
       <section className="page-hero between-flex" style={{ backgroundImage: `url(${PageHeroAbstract})` }}>

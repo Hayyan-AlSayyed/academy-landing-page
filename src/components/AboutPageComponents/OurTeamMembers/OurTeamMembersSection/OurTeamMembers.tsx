@@ -6,7 +6,7 @@ import "./OurTeamMembers.css"
 
 const OurTeamMembers = () => {
   return (
-    <section className="team-members-section m-section wrapper">
+    <section className="team-members-section m-section wrapper" id="teachers">
       <div className="team-members-header">
         <SectionHeader {...SECTION_HEADERS.TeamMembers} />
 

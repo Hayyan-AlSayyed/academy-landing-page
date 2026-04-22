@@ -1,7 +1,7 @@
-import type { IBaseCard } from '../../../../types';
+import type { ICardItem } from '../../../../types';
 import './ProcessCard.css';
 
-const ProcessCard = ({ title, description, icon }: IBaseCard) => {
+const ProcessCard = ({ title, description, icon }: ICardItem) => {
   return (
     <div className="process-card p-relative">
       <div className="process-card__icon-box center-flex">

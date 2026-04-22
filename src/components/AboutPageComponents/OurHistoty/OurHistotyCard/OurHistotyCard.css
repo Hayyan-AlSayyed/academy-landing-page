@@ -22,7 +22,7 @@
 }
 
 .history-card:hover .history-card__year {
-  box-shadow: 8px 8px 0px 1px #FF8D4D;
+  box-shadow: 8px 8px 0px 1px var(--color-orange);
 
 }
 

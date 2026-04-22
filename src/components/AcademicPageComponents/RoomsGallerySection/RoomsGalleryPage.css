@@ -68,7 +68,7 @@ h3.other {
 .room-gallery-container {
   border: var(--border-width-main) var(--color-border) solid;
   border-radius: 15px;
-  background: #fff;
+  background: var(--color-white);
   padding: 40px;
   box-shadow: 6px 6px 0px #262626;
   margin-top: 80px;
@@ -125,6 +125,29 @@ h3.other {
     font-size: 20px;
     margin-top: 30px;
   }
+}
+.room-gallery-card {
+  position: relative;
+
+}
+.room-gallery-card::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10px;
+    background-color: var(--color-orange);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 10px;
+  transition: var(--transition-slow);
+
+  }
+
+.room-gallery-card:hover::after {
+  box-shadow: none;
+  width: 100%;
+
 }
 
 @media (max-width:992px) {
@@ -183,3 +206,5 @@ h3.other {
     margin-top: 20px;
   }
 }
+
+

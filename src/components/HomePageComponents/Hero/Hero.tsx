@@ -1,7 +1,7 @@
 
 import { FadeIn } from '../../../Animation/FadeIn';
 import MotionWrapper from '../../../Animation/MotionWrapper';
-import type { HeroProps } from '../../../types';
+import type { IHeroData } from '../../../types';
 import './Hero.css';
 
 const Hero = ({
@@ -11,7 +11,7 @@ const Hero = ({
   description,
   stats,
   image
-}: HeroProps) => {
+}: IHeroData) => {
   return (
     <section className="hero__grid wrapper">
       <MotionWrapper delay={0.3}>
@@ -34,7 +34,7 @@ const Hero = ({
           </p>
 
           <div className="hero__stats-card border">
-            {stats.map((stat) => (
+            {stats?.map((stat) => (
               <div key={stat.id} className="stat-item">
                 <h3>{stat.value}</h3>
                 <p>{stat.label}</p>

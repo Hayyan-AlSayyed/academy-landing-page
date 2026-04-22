@@ -1,4 +1,109 @@
 /**
+ ******************************************************* >>>>>>>> Interfaces >>>>>>>> *******************************************************
+ */
+
+/**
+ * Generic base interface for items with ID and Title
+ */
+export interface IBaseItem {
+  id: number;
+  title?: string;
+}
+
+/**
+ * Interface for items that include a description
+ */
+export interface IDescriptionItem extends IBaseItem {
+  description: string;
+}
+
+export interface ICardItem extends IDescriptionItem {
+  icon?: string;
+  img?: string;
+  badge?: string;
+  link?: string;
+}
+export interface ISharedCardProps {
+  title?: string;
+  description: string;
+  img?: string;
+  icon?: string;
+  className?: string;
+}
+
+export interface IHeroData {
+  badge?: string;
+  subTitle?: string;
+  title?: string;
+  titlePart1?: string;
+  titlePart2?: string;
+  description: string;
+  stats?: IHeroStat[];
+  contactItems?: IContactItem[];
+  image?: string;
+}
+
+export type PageHeroMap = {
+  about: IHeroData;
+  academics: IHeroData;
+  admissions: IHeroData;
+  studentlife: IHeroData;
+  contact: IHeroData;
+};
+
+export interface IContactFormData {
+  parentName: string;
+  email: string;
+  phoneNumber: string;
+  studentName: string;
+  studentAge: string;
+  programOfInterest: string;
+  message: string;
+}
+
+export interface IProgramOption {
+  label: string;
+  value: string;
+}
+
+export interface IFormFieldProps {
+  label: string;
+  type?: "text" | "email" | "tel" | "number" | "textarea";
+  placeholder: string;
+  name: string;
+  isFullWidth?: boolean;
+}
+
+/**
+ * Interface for fee structure rows
+ */
+export interface IFee {
+  id: number;
+  program: string;
+  ageGroup: string;
+  annualTuition: string;
+  registrationFee: string;
+  activityFee: string;
+}
+
+/**
+ * Interface for additional school services
+ */
+export interface IAdditionalService {
+  id: number;
+  service: string;
+  cost: string;
+}
+
+export interface IRoom {
+  id: number;
+  category: string;
+  title: string;
+  description: string;
+  images: string[];
+}
+
+/**
  * Interface for shared section headers (Title, Subtitle, Desc)
  */
 export interface ISectionHeader {
@@ -42,17 +147,6 @@ export interface IHeroStat {
 }
 
 /**
- * Interface for Hero section content
- */
-export interface IHeroData {
-  subTitle: string;
-  titlePart1: string;
-  titlePart2: string;
-  description: string;
-  stats: IHeroStat[];
-}
-
-/**
  * Props for the Hero component
  */
 export interface HeroProps extends IHeroData {
@@ -69,21 +163,6 @@ export interface IPageHeroData {
 }
 
 /**
- * Mapping type for all page-specific Hero data
- */
-export type PageHeroMap = {
-  about: IPageHeroData;
-  academics: IPageHeroData;
-  admissions: IPageHeroData;
-  studentlife: IPageHeroData;
-  contact: IPageHeroData;
-};
-
-/**
- ******************************************************* >>>>>>>> Interfaces >>>>>>>> **********************************************************
- */
-
-/**
  * Interface for grouping footer links
  */
 export interface IFooterLinkGroup {
@@ -91,15 +170,6 @@ export interface IFooterLinkGroup {
   title: string;
   links: { label: string; path: string }[];
 }
-
-// /**
-//  * Interface for general contact information
-//  */
-// export interface IContactInfo {
-//   email: string;
-//   phone: string;
-//   address: string;
-// }
 
 /**
  * Interface for social media platform links
@@ -132,35 +202,11 @@ export interface FooterProps {
 }
 
 /**
- * Generic base interface for items with ID and Title
- */
-export interface IBaseItem {
-  id: number;
-  title?: string;
-}
-
-/**
- * Interface for items that include a description
- */
-export interface IDescriptionItem extends IBaseItem {
-  description: string;
-}
-
-/* **************************************************************** */
-
-/**
- * Interface for benefit items (Our Benefits section)
- */
-export interface IBenefit extends IDescriptionItem {
-  icon: string;
-}
-
-/**
  * Props for the Benefits section component
  */
 export interface BenefitsSectionProps {
   header: ISectionHeader;
-  benefits: IBenefit[];
+  benefits: ICardItem[];
 }
 
 /**
@@ -234,13 +280,6 @@ export interface NavigateSectionProps {
 }
 
 /**
- * General purpose card interface
- */
-export interface ICard extends IDescriptionItem {
-  icon: string;
-}
-
-/**
  * Interface for history timeline items
  */
 export interface IHistory extends IDescriptionItem {
@@ -255,79 +294,4 @@ export interface ITeam extends IDescriptionItem {
   name: string;
   img: string;
   qualification: string;
-}
-
-/**
- * Flexible base card interface for features
- */
-export interface IBaseCard extends IDescriptionItem {
-  icon?: string;
-  badge?: string;
-}
-
-/**
- * Interface for feature cards with images
- */
-export interface IFeatureCard extends IDescriptionItem {
-  img: string;
-}
-
-/**
- * Interface for fee structure rows
- */
-export interface IFee {
-  id: number;
-  program: string;
-  ageGroup: string;
-  annualTuition: string;
-  registrationFee: string;
-  activityFee: string;
-}
-
-/**
- * Interface for additional school services
- */
-export interface IAdditionalService {
-  id: number;
-  service: string;
-  cost: string;
-}
-
-export interface ISharedCardProps {
-  title?: string;
-  description: string;
-  img?: string;
-  icon?: string;
-  className?: string;
-}
-
-export interface IContactFormData {
-  parentName: string;
-  email: string;
-  phoneNumber: string;
-  studentName: string;
-  studentAge: string;
-  programOfInterest: string;
-  message: string;
-}
-
-export interface IProgramOption {
-  label: string;
-  value: string;
-}
-
-export interface IFormFieldProps {
-  label: string;
-  type?: "text" | "email" | "tel" | "number" | "textarea";
-  placeholder: string;
-  name: string;
-  isFullWidth?: boolean;
-}
-
-export interface IRoom {
-  id: number;
-  category: string;
-  title: string;
-  description: string;
-  images: string[];
 }

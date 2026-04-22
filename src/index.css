@@ -188,7 +188,7 @@ ul {
   align-items: center;
   font-size: 48px;
   text-transform: uppercase;
-  color: #FF8D4D;
+  color: var(--color-orange);
   text-align: center;
 }
 

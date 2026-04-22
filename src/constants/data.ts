@@ -32,7 +32,7 @@ import BookIcon from "../assets/icons/book.png";
 import BuzzleIcon from "../assets/icons/buzzle.png";
 import PenIcon from "../assets/icons/pen.png";
 import SignalIcon from "../assets/icons/signal.png";
-import StarIcon from "../assets/icons/rating-star.png";
+import Star from "../assets/icons/star.png";
 import SunIcon from "../assets/icons/sun.png";
 import clock from "../assets/icons/clock.png";
 import David from "../assets/icons/david.png";
@@ -74,12 +74,9 @@ import chart from "../assets/icons/chart.png";
 
 import type {
   IAdditionalService,
-  IBaseCard,
-  IBenefit,
-  ICard,
   IContactItem,
   IFAQ,
-  IFeatureCard,
+  ICardItem,
   IFee,
   IFooterLinkGroup,
   IFormFieldProps,
@@ -339,7 +336,7 @@ export const SECTION_HEADERS: { [key: string]: ISectionHeader } = {
 /**
  * Data for "Our Benefits" section
  */
-export const BENEFITS_DATA: IBenefit[] = [
+export const BENEFITS_DATA: ICardItem[] = [
   {
     id: 1,
     title: "Holistic Learning Approach",
@@ -529,7 +526,7 @@ export const NAVIGATION_PAGES_DATA: INavigationPage[] = [
 /**
  ****************************************************** >>>>>>>>  About Page >>>>>>>> ***************************************************
  */
-export const MISSION_VISION_DATA: ICard[] = [
+export const MISSION_VISION_DATA: ICardItem[] = [
   {
     id: 1,
     title: "Mission",
@@ -548,7 +545,7 @@ export const MISSION_VISION_DATA: ICard[] = [
 /**
  * Data for "Our Awards" section
  */
-export const OUR_AWARDS_DATA: IBenefit[] = [
+export const OUR_AWARDS_DATA: ICardItem[] = [
   {
     id: 1,
     title: "Outstanding Early Childhood Education Awar",
@@ -691,7 +688,7 @@ export const OUR_TEAM_DATA: ITeam[] = [
 /**
  * Data for "Our SPECIAL_FEATURES" section
  */
-export const SPECIAL_FEATURES_DATA: IBaseCard[] = [
+export const SPECIAL_FEATURES_DATA: ICardItem[] = [
   {
     id: 1,
     title: "Thematic Learning",
@@ -732,11 +729,11 @@ export const SPECIAL_FEATURES_DATA: IBaseCard[] = [
     title: "Play-Based Learning",
     description:
       "Play is an integral part of early childhood education. Our play-based approach enhances social skills, emotional development, and imaginative thinking.",
-    icon: StarIcon,
+    icon: Star,
   },
 ];
 
-export const STUDENT_LEARN_DATA: IFeatureCard[] = [
+export const STUDENT_LEARN_DATA: ICardItem[] = [
   {
     id: 1,
     title: "Language Arts",
@@ -866,7 +863,7 @@ export const libraryImages: string[] = [Librar1, Librar2, Librar3, Librar4];
  ************************************************ >>>>>>>> Admissions Page >>>>>>>> ***************************************************
  */
 
-export const ADDMISSION_PROCESS_DATA: IBaseCard[] = [
+export const ADDMISSION_PROCESS_DATA: ICardItem[] = [
   {
     id: 1,
     title: "Inquiry",
@@ -972,7 +969,7 @@ export const ADDITIONAL_SERVICES_DATA: IAdditionalService[] = [
 /**
  * Data for "Extracurricular Activities" section
  */
-export const EXTRACURRICULAR_ACTIVITIES_DATA: IBaseCard[] = [
+export const EXTRACURRICULAR_ACTIVITIES_DATA: ICardItem[] = [
   {
     id: 1,
     title: "Sports and Athletics",
@@ -1020,7 +1017,7 @@ export const EXTRACURRICULAR_ACTIVITIES_DATA: IBaseCard[] = [
 /**
  * Data for "Events & Celebrations" section
  */
-export const EVENTS_CELEB_DATA: IFeatureCard[] = [
+export const EVENTS_CELEB_DATA: ICardItem[] = [
   {
     id: 1,
     title: "Annual Sports Day",
@@ -1067,7 +1064,7 @@ export const EVENTS_CELEB_DATA: IFeatureCard[] = [
 /**
  * Data for "Student Support" section
  */
-export const STUDENT_SUPPORT_DATA: IBaseCard[] = [
+export const STUDENT_SUPPORT_DATA: ICardItem[] = [
   {
     id: 1,
     title: "Counseling",
@@ -1158,7 +1155,7 @@ export const FOOTER_NAV_DATA: IFooterLinkGroup[] = [
     links: [
       { label: "Our Mission", path: "#mission" },
       { label: "Our Vision", path: "#mission" },
-      { label: "Awards and Recognitions", path: "#award" },
+      { label: "Awards and Recognitions", path: "#awards" },
       { label: "History", path: "#history" },
       { label: "Teachers", path: "#teachers" },
     ],

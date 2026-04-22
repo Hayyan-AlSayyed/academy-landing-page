@@ -12,8 +12,8 @@
   padding: 40px;
   min-height: 270px;
   transform: scale(1.02) translateY(-5px);
-
 }
+
 
 .faq-card__header {
   display: flex;
@@ -33,8 +33,13 @@
 
 .faq-card.active .faq-card__question {
   border-bottom: var(--border-width-main) var(--color-border) solid;
-
+  transition: var(--transition-fast);
 }
+
+.faq-card.active:hover .faq-card__question {
+  border-bottom: var(--color-orange) var(--border-width-main) solid;
+}
+
 
 .faq-card__btn {
   width: 40px;

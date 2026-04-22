@@ -6,7 +6,7 @@ import "./OurHistotySection.css"
 
 const OurHistotySection = () => {
   return (
-    <section className="our-history-section m-section wrapper">
+    <section className="our-history-section m-section wrapper" id="history">
       <div className="history-header">
         <SectionHeader {...SECTION_HEADERS.OurHistory} />
       </div>

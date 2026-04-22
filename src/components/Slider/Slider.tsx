@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Slider.css';
 import arrowLeft from '../../assets/icons/arrow-left.png';
 import arrowRight from '../../assets/icons/arrow-right.png';
+
 interface SliderProps<T> {
   data: T[];
   itemsVisible: number;

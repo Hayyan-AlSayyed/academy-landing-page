@@ -1,8 +1,8 @@
-import type { ICard } from "../../../../types"
+import type { ICardItem } from "../../../../types"
 import './MVCard.css'
 
 
-const MVCard = ({ title, description, icon }: ICard) => {
+const MVCard = ({ title, description, icon }: ICardItem) => {
   return (
     <div className="mission-vision-card">
       <div className="mission-vision-card__header between-flex">

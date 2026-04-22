@@ -1,7 +1,7 @@
-import type { IBaseCard } from '../../../types';
+import type { ICardItem } from '../../../types';
 import './BaseCardComponent.css';
 
-const BaseCardComponent = ({ title, description, icon }: IBaseCard) => {
+const BaseCardComponent = ({ title, description, icon }: ICardItem) => {
   return (
     <div className="base-card p-relative">
       <div className="base-card__icon-box center-flex">
